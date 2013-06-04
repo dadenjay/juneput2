@@ -1,0 +1,272 @@
+http://jsbin.com/onofut/1/edit
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> </script>
+<style type="text/css">
+//BEGIN CSS
+
+#top{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_p_top.png');
+  background-repeat:repeat-x;
+} 
+#top2{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_p_top.png');
+  background-repeat:repeat-x;
+} 
+#left{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_p_left_slot.png');
+  background-repeat:repeat-y;
+} 
+#left2{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_p_left_slot.png');
+  background-repeat:repeat-y;
+} 
+#bottom{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_p_btm.png');
+  background-repeat:repeat-x;
+} 
+#bottom2{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_p_btm.png');
+  background-repeat:repeat-x;
+} 
+#right{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_p_right_slot.png');
+  background-repeat:repeat-y;
+}
+#big{
+  background-color:#ffdd9a;
+  position:absolute;
+  top:100px;
+  left:100px;
+}
+#leftside{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_i_left_slot.png');
+  background-repeat:repeat-y;
+}
+#leftside2{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_i_left_slot.png');
+  background-repeat:repeat-y;
+}
+#rightside{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_i_right_slot.png');
+  background-repeat:repeat-y;
+}
+#topside{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_i_top.png');
+  background-repeat:repeat-x;
+}
+#btmside{
+  background-image:url('http://2012.harrisonfarm.com/ai/wiz_i_btm.png');
+  background-repeat:repeat-x;
+}
+.dividerdiv{
+  background-image:url('http://2012.harrisonfarm.com/ai/divider.png');
+  background-repeat;
+  position:absolute;
+  
+}
+.arrowshaft{
+  background-image:url('http://2012.harrisonfarm.com/ai/arrow_r-l.png');
+  background-repeat;
+  position:absolute;
+  
+}
+.arrowshaftup{
+  background-image:url('http://2012.harrisonfarm.com/ai/arrow_t-b.png');
+  background-repeat;
+  position:absolute;
+  
+}
+
+//END CSS
+</style>
+</head>
+<body>
+  
+<div id="big" style="width:400px;height:400px"></div>
+  
+<div id="leftside" style="width:70px;height:120px;position:absolute; top:124px; left:252px;"></div>
+  
+<div id="leftside2" style="width:70px;height:80px;position:absolute; top:340px; left:252px;"></div>
+  
+<div id="rightside" style="width:70px;height:370px;position:absolute; top:124px; left:270px;"></div>
+  
+<div id="topside" style="width:71px;height:30px;position:absolute; top:274px; left:151px;"></div>
+  
+<div id="btmside" style="width:71px;height:30px;position:absolute; top:292px; left:151px;"></div>
+    
+<img id="tl" src="http://2012.harrisonfarm.com/ai/wiz_p_tl.png" style="float:left;position:absolute;left:0px;top:0px; background-color:none;">
+  
+<img id="tt" src="http://2012.harrisonfarm.com/ai/wiz_p_t_top.png" style="float:left;position:absolute;left:222px;top:0px; background-color:none;">
+   
+<div id="top2" style="width:132px;height:150px;position:absolute;left:318px;top:0px;"></div>
+  
+<div id="top" style="width:72px;height:150px;position:absolute;left:150px;top:0px;"></div>
+
+<img id="tr" src="http://2012.harrisonfarm.com/ai/wiz_p_tpr.png" style="position:absolute; top:0px; left:450px; background-color:none;">
+  
+<img id="hndl" src="http://2012.harrisonfarm.com/ai/wiz_handle.png" style="position:absolute; top:522px; left:230px; background-color:none;">
+  
+<img id="ptl" src="http://2012.harrisonfarm.com/ai/wiz_p_t_left.png" style="float:left;position:absolute; top:244px; left:1px;">
+  
+<div id="left" style="width:220px;height:120px;position:absolute; top:124px; left:0px;"></div>
+
+<div id="left2" style="width:220px;height:80px;position:absolute; top:340px; left:0px;"></div>  
+
+<div id="right" style="width:300px;height:296px;position:absolute; top:124px; left:450px;"></div>
+
+<img id="bl" src="http://2012.harrisonfarm.com/ai/wiz_p_bl.png" style="float:left;position:absolute; top:420px; left:0px;">
+  
+<div id="bottom" style="width:70px;height:150px;position:absolute; top:420px; left:150px;"></div>
+  
+<div id="bottom2" style="width:130px;height:150px;position:absolute; top:420px; left:320px;"></div>
+  
+<img id="ptu" src="http://2012.harrisonfarm.com/ai/wiz_p_t_btm.png" style="float:left;position:absolute; top:420px; left:220px;">
+  
+<img id="itl" src="http://2012.harrisonfarm.com/ai/wiz_i_t_left.png" style="float:left;position:absolute; top:244px; left:222px;">
+
+<img id="br" src="http://2012.harrisonfarm.com/ai/wiz_p_br.png" style="float:left;position:absolute; top:420px; left:450px; ">
+  
+<div id="tim" class="dividerdiv" style="width:156px; height:90px;top:340px;left:108px;"></div>
+  
+<div id="jon" class="dividerdiv" style="width:156px; height:120px;top:124px;left:108px;"></div>
+  
+<div id="bob" class="dividerdiv" style="width:216px; height:320px;top:124px;left:276px;"></div>
+  
+<div id="shaft" class="arrowshaft" style="width:117px; height:20px;top:420px;left:127px;"></div>
+  
+<img id="arrowleft" src="http://2012.harrisonfarm.com/ai/arrow_left.png" style="float:left;position:absolute; top:420px; left:244px; ">
+  
+<img id="arrowright" src="http://2012.harrisonfarm.com/ai/arrow_right.png" style="float:left;position:absolute; top:420px; left:110px; ">
+  
+<div id="shaft2" class="arrowshaft" style="width:177px; height:20px;top:420px;left:295px;"></div>
+  
+<img id="arrowleft2" src="http://2012.harrisonfarm.com/ai/arrow_left.png" style="float:left;position:absolute; top:420px; left:472px; ">
+  
+<img id="arrowright2" src="http://2012.harrisonfarm.com/ai/arrow_right.png" style="float:left;position:absolute; top:420px; left:278px; ">
+  
+<div id="shaftup" class="arrowshaftup" style="width:20px; height:163px;top:102px;left:140px;"></div>
+  
+<img id="arrowup" src="http://2012.harrisonfarm.com/ai/arrow_top.png" style="float:left;position:absolute; top:85px; left:140px; ">
+  
+<img id="arrowdown" src="http://2012.harrisonfarm.com/ai/arrow_btm.png" style="float:left;position:absolute; top:265px; left:140px; ">
+  
+<div id="shaftup2" class="arrowshaftup" style="width:20px; height:130px;top:313px;left:140px;"></div>
+  
+<img id="arrowup2" src="http://2012.harrisonfarm.com/ai/arrow_top.png" style="float:left;position:absolute; top:300px; left:140px; ">
+  
+<img id="arrowdown2" src="http://2012.harrisonfarm.com/ai/arrow_btm.png" style="float:left;position:absolute; top:442px; left:140px; ">
+  
+  <FORM ACTION="#" NAME="convert">
+  <p>
+    <input name="zzz" max="300" size="3" style="position:absolute; top:420px; left:129px;" id="ta" onkeyup="document.convert.cts.value = 14 - document.convert.zzz.value">
+  </p>
+  <p>
+    <input name="xxx" max="300" size="3" style="position:absolute; top:100px; left:129px;" id="hta">
+  </p>  
+  
+<INPUT TYPE=TEXT NAME="cts" id="bresult" size="3" style="position:absolute; top:420px; left:428px;" DISABLED>
+    
+<INPUT TYPE=TEXT NAME="cms" id="aresult" size="3" style="position:absolute; top:390px; left:129px;" DISABLED>
+</FORM>
+
+<script type="text/javascript">
+//BEGIN JAVASCRIPT
+
+var Calcform = {
+  init: function(){
+    $('input').keyup(function() {
+      Calcform.myFunction();
+    });
+  },
+  
+myFunction: function(){
+  var b = Calcform.wGet();
+  var a = Calcform.hGet();
+  
+  
+  $("div#leftside").css({"height": a-72, "left": b+113});
+  $("div#leftside2").css({"height": 272-a, "left": b+113, "top": a+148});
+  $("img#itl").css({"top": a+52, "left": b+83});
+  $("div#rightside").css({"left": b+131});
+  $("div#topside").css({"width": b-68, "top": a+82});
+  $("div#btmside").css({"width": b-68, "top": a+100});
+  $("div#bottom").css({"width": b-69});
+  $("div#bottom2").css({"left": b+181, "width": 269-b});
+  $("img#ptu").css({"left": b+81});
+  $("div#top").css({"width": b-67});
+  $("div#top2").css({"left": b+179, "width": 271-b});
+  $("img#tt").css({"left": b+83});
+  $("img#ptl").css({"top": a+52});
+  $("div#left").css({"height": a-72});
+  $("div#left2").css({"height": 272-a, "top": a+148});
+  $("div#bob").css({"width": 355-b, "left": b+137});
+  $("div#jon").css({"height": a-90, "width": b+17});
+  $("div#tim").css({"width": b+17, "height": 270-a, "top": a+148});
+  $("div#shaft").css({"width": b-23});
+  $("div#shaftup").css({"height": a-28});
+  $("img#arrowleft").css({"left": b+104});
+  $("img#arrowdown").css({"top": a+74});
+  $("div#shaft2").css({"width": 300-b, "left": b+156});
+  $("img#arrowright2").css({"left": b+139});
+  $("div#shaftup2").css({"height": 320-a, "top": a+126});
+  $("img#arrowup2").css({"top": a+109});
+  
+  var bres = 500-b;
+  $("input#bresult").attr('value', bres);
+
+
+},
+hGet: function(){
+var a = parseFloat(document.getElementById('hta').value);
+if (a > 11){a = 11;}if (a < 3){a = 3;}a*=24;return a;},
+ 
+wGet: function(){ 
+var b = parseFloat(document.getElementById('ta').value);
+if (b > 11){b = 11;}if(b < 3){b = 3;}b*=24;return b;}  
+};
+Calcform.init();
+
+
+/*var Calcform = {
+  init: function(){
+    $('input').keyup(function() {
+      Calcform.myFunction();
+    });
+  },
+  
+myFunction: function(){
+  var b = Calcform.wGet();
+  var a = Calcform.hGet();
+  $("div#top").css('width', b-50);
+  $("div#left").css('height', a-25);
+  $("div#right").css({"height": a-25, "left": b+100});
+  $("div#bottom").css({"width": b-50, "top": a+100});
+  $("img#tr").css('left', b+100);
+  $("img#bl").css('top', a+100);
+  $("img#br").css({"left": b+100, "top": a+100});
+  $("#big").css({"width": b,"height": a});
+  $("#ta").css({"top": a+170, "left": (b*0.55)+50});
+  $("#hta").css({"top": (a*0.65)+50, "left": b+147});
+},
+
+hGet: function(){
+var a = parseFloat(document.getElementById('hta').value);
+if (a > 30){a = 30;}if (a < 3){a = 3;}a*=12;return a;},
+ 
+wGet: function(){ 
+var b = parseFloat(document.getElementById('ta').value);
+if (b > 30){b = 30;}if(b < 5){b = 5;}b*=12;return b;}  
+};
+
+Calcform.init();*/
+
+//END JAVASCRIPT
+</script>
+  
+</body>
+</html>
+
